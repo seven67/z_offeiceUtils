@@ -14,7 +14,11 @@ public class TestServiceLoader {
         Iterator<Company> animalIterator = serviceLoader.iterator();
         while(animalIterator.hasNext()){
             Company company = animalIterator.next();
-            company.printName();
+            if(company instanceof Hebao){
+                System.out.println( " hebao "  );
+            }else{
+                company.printName();
+            }
         }
     }
 }

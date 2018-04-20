@@ -1,1 +1,0 @@
-package person.seven.thread.future;public interface Data {    public String getResponse() throws InterruptedException;}
