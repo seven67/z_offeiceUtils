@@ -12,6 +12,8 @@
 #####  nio介绍 
 #####  http请求工具
 #####  redis分布式锁实现
+#####  solr查询  ./solr start  ./solr craete -c name
+
 
 
 
