@@ -9,9 +9,9 @@ import java.io.Serializable;
  *
  */
 public class AddressBean implements Serializable{
-	
+
 	/**
-	 * 
+	 *
 	 */
 	private static final long serialVersionUID = 1794251L;
 
@@ -20,7 +20,7 @@ public class AddressBean implements Serializable{
 	 */
 	@Field(value="id")
 	private String id;
-	
+
 	/**
 	 * 地级市，直辖市
 	 */

@@ -1,5 +1,7 @@
 package person.seven.solr;
 
+import com.google.common.collect.Lists;
+import com.sun.org.apache.xerces.internal.impl.dv.util.Base64;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.solr.client.solrj.SolrClient;
 import org.apache.solr.client.solrj.impl.HttpClientUtil;
@@ -13,8 +15,13 @@ import org.apache.solr.common.params.ModifiableSolrParams;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.BufferedReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.lang.reflect.Field;
 import java.lang.reflect.Method;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.*;
 
 
@@ -27,35 +34,53 @@ public class SolrUtil {
 	private static final Logger logger = LoggerFactory.getLogger(SolrUtil.class);
 	
 	private SolrClient client = null;
-	private static final String SOLR_URL = "http://localhost:8983/solr";
+	private static final String SOLR_URL = "http://localhost:8983/solr/";
 	private static final String COLLECTION = "core";
+	private static final String USERNAME = "admin";
+	private static final String PASSWORD = "admin";
 
 	public static void main(String[] args) throws Exception {
-//		add();
-		query();
+		add();
+//		query();
 	}
 
 
 	private static void query() {
 		SolrUtil solrService = new SolrUtil();
-		solrService.init();
 		Map<String,String> queryParamMap = new HashMap<>();
-		queryParamMap.put("q","address:*增*");
+		queryParamMap.put("q","*:*");
 		try {
 			List<AddressBean> hitAddress = solrService.query(COLLECTION, queryParamMap , AddressBean.class);
-			System.out.println(hitAddress.toString());
+			System.out.println("solr查詢出來地址："+hitAddress.toString());
 		} catch (Exception e) {
 			System.out.println(e);
 		}
 	}
 
 
+	private static void addBatch() {
+		SolrUtil solrService = new SolrUtil();
+        List<AddressBean>  addList = Lists.newArrayList();
+        for (int i = 0; i < 10; i++) {
+            AddressBean addressBean = new AddressBean();
+            addressBean.setId("id"+i);
+            addressBean.setAddress("地址"+i);
+            addList.add(addressBean);
+        }
+		try {
+			solrService.addBatch(COLLECTION, addList);
+			System.out.println("添加成功");
+		} catch (Exception e) {
+			System.out.println(e.getMessage());
+			logger.error("错误",e);
+		}
+	}
+
 	private static void add() {
 		SolrUtil solrService = new SolrUtil();
-		solrService.init();
 		AddressBean addressBean = new AddressBean();
-		addressBean.setId("这是id");
-		addressBean.setAddress("这是新增地址");
+		addressBean.setId("ids");
+		addressBean.setAddress("地址s");
 		try {
 			solrService.add(COLLECTION, addressBean);
 			System.out.println("添加成功");
@@ -67,13 +92,16 @@ public class SolrUtil {
 
 
 	public SolrUtil() {
+		init();
 	}
 	
 	private void init() {
-        ModifiableSolrParams params = new ModifiableSolrParams();  
-        params.set(HttpClientUtil.PROP_MAX_CONNECTIONS, 128);  
-        params.set(HttpClientUtil.PROP_MAX_CONNECTIONS_PER_HOST, 32);  
-        params.set(HttpClientUtil.PROP_FOLLOW_REDIRECTS, false);
+        ModifiableSolrParams params = new ModifiableSolrParams();
+        params.set(HttpClientUtil.PROP_MAX_CONNECTIONS, 128);
+        params.set(HttpClientUtil.PROP_MAX_CONNECTIONS_PER_HOST, 32);
+		params.set(HttpClientUtil.PROP_BASIC_AUTH_USER, USERNAME);
+		params.set(HttpClientUtil.PROP_BASIC_AUTH_PASS, PASSWORD);
+		params.set(HttpClientUtil.PROP_FOLLOW_REDIRECTS, false);
         params.set(HttpClientUtil.PROP_MAX_CONNECTIONS, 1000);  
         params.set(HttpClientUtil.PROP_ALLOW_COMPRESSION, true);  
         params.set(HttpClientUtil.PROP_MAX_CONNECTIONS_PER_HOST, 1000);  

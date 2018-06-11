@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- log4j 2 status：本身的日志级别 monitorInterval：不重启应用的情况下 修改配置文件，在300s(?ms)之后会自动读取新的配置文件 -->
+<Configuration status="info" monitorInterval="300">
+	<Appenders>
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss} %-5level %L %M %logger{36} - %msg%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Root level="debug">
+			<AppenderRef ref="console" />
+		</Root>
+	</Loggers>
+</Configuration>  
