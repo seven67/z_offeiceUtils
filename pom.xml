@@ -22,17 +22,20 @@
             <artifactId>freemarker</artifactId>
             <version>2.3.25-incubating</version>
         </dependency>
+        <!--   word文档相关依赖包   -->
         <dependency>
             <groupId>com.lowagie</groupId>
             <artifactId>itext</artifactId>
             <version>2.1.7</version>
             <type>jar</type>
         </dependency>
+        <!--  pdf转换基础包 很容易产生版本问题  -->
         <dependency>
             <groupId>fr.opensagres.xdocreport</groupId>
             <artifactId>org.apache.poi.xwpf.converter.pdf</artifactId>
             <version>1.0.4</version>
         </dependency>
+        <!--  使用log4j依赖的三个包  -->
         <dependency>
             <groupId>org.apache.logging.log4j</groupId>
             <artifactId>log4j-api</artifactId>
@@ -48,66 +51,79 @@
             <artifactId>log4j-slf4j-impl</artifactId>
             <version>2.11.0</version>
         </dependency>
+        <!--  google对于一些集合的封装包  -->
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <!--  spring注入bean的依赖包  -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-beans</artifactId>
             <version>5.0.1.RELEASE</version>
         </dependency>
+        <!--  spring上下文容器包  -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>5.0.1.RELEASE</version>
         </dependency>
+        <!--  http请求的基础依赖包  httppost   closeablehttpclient  -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpclient</artifactId>
             <version>4.5.3</version>
         </dependency>
+        <!--  http带文件上传的依赖包  -->
         <dependency>
             <groupId>org.apache.httpcomponents</groupId>
             <artifactId>httpmime</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <!--  redis基础依赖包 -->
         <dependency>
             <groupId>redis.clients</groupId>
             <artifactId>jedis</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <!--  solr的依赖包     -->
         <dependency>
             <groupId>org.apache.solr</groupId>
             <artifactId>solr-solrj</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <!--  阿里对fastjson的支持包 -->
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
             <version>1.2.4</version>
         </dependency>
+        <!--  aop spring支持aop依赖  比如配置文件中的     <aop:aspectj-autoproxy />  -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
             <version>4.3.10.RELEASE</version>
         </dependency>
+        <!--  aop 相关实现 @Aspect   -->
         <dependency>
             <groupId>org.aspectj</groupId>
             <artifactId>aspectjweaver</artifactId>
             <version>1.8.10</version>
         </dependency>
+        <!--  控制层相关注解   @controller 等  -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-web</artifactId>
             <version>4.3.10.RELEASE</version>
         </dependency>
+        <!--  测试依赖包  -->
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>RELEASE</version>
         </dependency>
+        <!--  spring 测试依赖 省去代码获取application  -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-test</artifactId>
