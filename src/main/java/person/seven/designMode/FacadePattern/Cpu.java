@@ -1,0 +1,1 @@
+package person.seven.designMode.FacadePattern;/** * @description: * @author: liuqi create on 2018/8/13 **/public class Cpu implements Hardware {    @Override    public void operate() {        System.out.println("启动CPU");    }}

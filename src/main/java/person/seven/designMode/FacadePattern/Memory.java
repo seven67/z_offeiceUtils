@@ -1,0 +1,1 @@
+package person.seven.designMode.FacadePattern;/** * @description: * @author: liuqi create on 2018/8/13 **/public class Memory implements Hardware {    @Override    public void operate() {        System.out.println("加载内存");    }}
