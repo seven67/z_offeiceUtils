@@ -1,1 +1,1 @@
-package person.seven.designMode.create.PrototypePattern;/** * @description: * @author: liuqi create on 2018/8/14 **/public class Rectangle extends Shape{    public Rectangle() {        type = "这是长方形！";    }    @Override    void draw() {    }}
+package person.seven.designMode.create.PrototypePattern;/** * @description: * @author: liuqi create on 2018/8/14 **/public class Rectangle extends Shape{    public Rectangle(String id) {        this.id = id;        type = "这是长方形！";    }    @Override    void draw() {    }}

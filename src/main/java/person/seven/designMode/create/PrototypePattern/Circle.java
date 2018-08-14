@@ -1,1 +1,1 @@
-package person.seven.designMode.create.PrototypePattern;/** * @description: * @author: liuqi create on 2018/8/14 **/public class Circle extends Shape {    public Circle() {        type = "这是圆形！";    }    @Override    void draw() {    }}
+package person.seven.designMode.create.PrototypePattern;/** * @description: * @author: liuqi create on 2018/8/14 **/public class Circle extends Shape {    public Circle(String id) {        this.id = id;        type = "这是圆形！";    }    @Override    void draw() {    }}
