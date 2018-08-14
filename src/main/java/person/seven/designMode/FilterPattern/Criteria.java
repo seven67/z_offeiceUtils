@@ -1,1 +1,0 @@
-package person.seven.designMode.FilterPattern;import java.util.List;/** * @description: * @author: liuqi create on 2018/8/10 **/public interface Criteria {    public List<Person> meetCriteria(List<Person> persons,TypeEnum type,String filedName) throws Exception ;    public List<Person> meetCriteria(List<Person> persons) throws Exception;}

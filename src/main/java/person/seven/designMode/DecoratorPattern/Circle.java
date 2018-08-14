@@ -1,1 +1,0 @@
-package person.seven.designMode.DecoratorPattern;/** * @description: * @author: liuqi create on 2018/8/13 **/public class Circle implements Shape {    @Override    public void draw() {        System.out.println("Shape: Circle");    }}
