@@ -1,0 +1,1 @@
+package person.seven.designMode.construction.AdapterPattern;/** * @description: * @author: liuqi create on 2018/8/14 **/public class Mp4MediaPlayer implements AdvancedMediaPlayer{    @Override    public void playAvi( String fileName) {    }    @Override    public void playMp4( String fileName) {        System.out.println("MP4适配器播放："+fileName);    }}

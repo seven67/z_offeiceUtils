@@ -1,0 +1,1 @@
+package person.seven.designMode.construction.AdapterPattern;/** * @description: * @author: liuqi create on 2018/8/14 **/public interface AdvancedMediaPlayer {    public void playAvi(String fileName);    public void playMp4(String fileName);}

@@ -1,0 +1,1 @@
+package person.seven.designMode.construction.AdapterPattern;/** * @description: * @author: liuqi create on 2018/8/14 **/public enum  MediaEnum {    MP3,MP4,AVI,OTHER;}
