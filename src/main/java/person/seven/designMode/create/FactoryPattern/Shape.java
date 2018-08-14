@@ -1,0 +1,1 @@
+package person.seven.designMode.create.FactoryPattern;/** * @description: * @author: liuqi create on 2018/8/14 **/public interface Shape {    void draw();}

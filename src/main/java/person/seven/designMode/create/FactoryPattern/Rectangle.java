@@ -1,0 +1,1 @@
+package person.seven.designMode.create.FactoryPattern;/** * @description: * @author: liuqi create on 2018/8/14 **/public class Rectangle implements Shape {    @Override    public void draw() {        System.out.println("这是一个长方形对象");    }}
