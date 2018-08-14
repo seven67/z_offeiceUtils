@@ -1,0 +1,1 @@
+package person.seven.designMode.behavior.TemplatePattern;/** * @description: * @author: liuqi create on 2018/8/14 **/public class WarmbloodGame extends Game {    @Override    void startPlay() {        System.out.println("热血类游戏正在搞起");    }}

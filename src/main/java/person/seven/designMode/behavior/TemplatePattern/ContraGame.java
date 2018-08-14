@@ -1,0 +1,1 @@
+package person.seven.designMode.behavior.TemplatePattern;/** * @description: * @author: liuqi create on 2018/8/14 **/public class ContraGame extends Game {    @Override    void startPlay() {        System.out.println("魂斗罗游戏正在进行中");    }}
