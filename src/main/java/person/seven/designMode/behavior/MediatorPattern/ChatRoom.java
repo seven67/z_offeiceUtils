@@ -1,0 +1,1 @@
+package person.seven.designMode.behavior.MediatorPattern;/** * @description: * @author: liuqi create on 2018/8/15 **/public class ChatRoom {    public static void sendMessage(ChatRoomUser user,String message){        System.out.println(String.format("我是聊天室中专站：当前用户：%s 他说：%s",user.getName(),message));    }}
