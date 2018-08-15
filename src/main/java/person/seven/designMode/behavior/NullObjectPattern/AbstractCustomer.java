@@ -1,0 +1,1 @@
+package person.seven.designMode.behavior.NullObjectPattern;/** * @description: * @author: liuqi create on 2018/8/15 **/public abstract class AbstractCustomer {    protected String name;    public abstract boolean isNull();    public abstract String getName();}

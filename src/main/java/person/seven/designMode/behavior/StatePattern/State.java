@@ -1,0 +1,1 @@
+package person.seven.designMode.behavior.StatePattern;/** * @description: * @author: liuqi create on 2018/8/15 **/public interface State {    public void doAction(Context context);}

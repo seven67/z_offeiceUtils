@@ -1,0 +1,1 @@
+package person.seven.designMode.behavior.NullObjectPattern;/** * @description: * @author: liuqi create on 2018/8/15 **/public class NullCustomer extends AbstractCustomer {    @Override    public boolean isNull() {        return true;    }    @Override    public String getName() {        return "找不到这个客户的记录";    }}

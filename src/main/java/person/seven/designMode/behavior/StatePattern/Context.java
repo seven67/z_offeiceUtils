@@ -1,0 +1,1 @@
+package person.seven.designMode.behavior.StatePattern;/** * @description: * @author: liuqi create on 2018/8/15 **/public class Context {    private State state;    public Context( ) {        this.state = null;    }    public State getState() {        return state;    }    public void setState(State state) {        this.state = state;    }}
