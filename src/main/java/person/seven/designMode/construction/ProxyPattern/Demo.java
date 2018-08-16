@@ -1,0 +1,1 @@
+package person.seven.designMode.construction.ProxyPattern;/** * @description: 代理模式 * 在代理模式（Proxy Pattern）中，一个类代表另一个类的功能。这种类型的设计模式属于结构型模式。 * @author: liuqi create on 2018/8/16 **/public class Demo {    public static void main(String[] args) {        ProxyImage proxy = new ProxyImage("buterfo.img");        proxy.display();        proxy.display();    }}

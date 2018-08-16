@@ -1,0 +1,1 @@
+package person.seven.designMode.construction.ProxyPattern;/** * @description: * @author: liuqi create on 2018/8/16 **/public interface Image {    void display();}
