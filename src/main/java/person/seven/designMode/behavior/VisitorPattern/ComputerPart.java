@@ -1,0 +1,1 @@
+package person.seven.designMode.behavior.VisitorPattern;/** * @description: * @author: liuqi create on 2018/8/16 **/public interface ComputerPart {    public void accept(ComputerPartVisitor computerPartVisitor);}

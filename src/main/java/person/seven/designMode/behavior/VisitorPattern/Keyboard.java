@@ -1,0 +1,1 @@
+package person.seven.designMode.behavior.VisitorPattern;/** * @description: * @author: liuqi create on 2018/8/16 **/public class Keyboard implements ComputerPart{    @Override    public void accept(ComputerPartVisitor computerPartVisitor) {        computerPartVisitor.visit(this);    }}
