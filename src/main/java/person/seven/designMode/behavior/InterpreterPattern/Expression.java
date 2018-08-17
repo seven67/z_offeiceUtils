@@ -1,0 +1,1 @@
+package person.seven.designMode.behavior.InterpreterPattern;/** * @description: * @author: liuqi create on 2018/8/17 **/public interface Expression {    public boolean interpret(String context);}
