@@ -1,0 +1,1 @@
+package person.seven.jdk.jdk8;/** * @description: * @author: liuqi create on 2018/10/22 **/@FunctionalInterfacepublic interface GreetingService {    void sayMessage(String message);}

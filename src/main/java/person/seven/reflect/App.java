@@ -1,0 +1,1 @@
+package person.seven.reflect;/** * @description: * @author: liuqi create on 2018/9/3 **/public class App {    void sayHello(){        System.out.println("Hello ");    }}

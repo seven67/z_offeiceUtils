@@ -1,0 +1,1 @@
+package person.seven.jdk.jdk8;/** * @description: * @author: liuqi create on 2018/10/22 **/public class Demo {    public static void main(String[] args) {        GreetingService greetingService = message -> {            System.out.println("hello "+ message);        };        greetingService.sayMessage("word!");    }}
