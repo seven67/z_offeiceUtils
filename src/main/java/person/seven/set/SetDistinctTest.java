@@ -10,6 +10,14 @@ import java.util.Set;
  */
 public class SetDistinctTest {
 
+    /**
+     * 1、hashcode和equals都是object的方法
+     * 2、hashcode可以理解为比较轻量级实现，equals是重量级实现
+     * 3、丢到set集合中，先调用hashcode方法，如果有重复再调用equals实现
+     *    （hashCode()的默认行为是对堆上的对象产生独特值。如果没有重写hashCode()，则该class的两个对象无论如何都不会相等（即使这两个对象指向相同的数据））
+     * 4、如果重写equals，不重写hashcode，那equals不会起效
+     * @param args
+     */
 
     public static void main(String[] args) {
         Set<Student> students = new HashSet<>();
@@ -71,10 +79,10 @@ public class SetDistinctTest {
 
         @Override
         public int hashCode() {
-            final int prime = 31;
             int result = 1;
-            result = prime * result + ((name == null) ? 0 : name.hashCode());
-            result = prime * result + ((no == null) ? 0 : no.hashCode());
+            result = result + ((name == null) ? 0 : name.hashCode());
+            result = result + ((no == null) ? 0 : no.hashCode());
+            System.out.println(result);
             return result;
         }
 
