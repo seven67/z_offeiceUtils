@@ -129,6 +129,17 @@
             <artifactId>spring-test</artifactId>
             <version>4.3.10.RELEASE</version>
         </dependency>
+        <!--  redisson  -->
+        <dependency>
+           <groupId>org.redisson</groupId>
+           <artifactId>redisson</artifactId>
+           <version>3.11.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.2</version>
+        </dependency>
 
     </dependencies>
 
