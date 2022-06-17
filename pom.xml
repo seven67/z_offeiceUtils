@@ -97,7 +97,7 @@
         <dependency>
             <groupId>com.alibaba</groupId>
             <artifactId>fastjson</artifactId>
-            <version>1.2.4</version>
+            <version>1.2.83</version>
         </dependency>
         <!--  aop spring支持aop依赖  比如配置文件中的     <aop:aspectj-autoproxy />  -->
         <dependency>
